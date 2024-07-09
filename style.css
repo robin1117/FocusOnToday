@@ -1,0 +1,374 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #effae5;
+    ;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.page {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* flex-direction: column; */
+    text-align: center;
+    /* border: 2px solid rgb(0, 0, 0); */
+    height: 100%;
+    padding: 0px 25px;
+
+}
+
+.mainheading {
+    font-size: 64px;
+    color: #48A300;
+    /* border: 2px solid black; */
+    margin: 5px 5px;
+}
+
+.mainheading span {
+    color: #61481C;
+}
+
+
+.main {
+    text-align: left;
+    display: block;
+    padding: 35px;
+    background-color: rgb(255, 255, 255);
+    max-width: 660px;
+    max-height: fit-content;
+    top: 179px;
+    left: 390px;
+    border-radius: 15px;
+    margin: auto;
+    transition: heigth 2s;
+
+}
+
+main {
+    /* border: 2px solid red; */
+    padding: 15px 0px;
+    /* transition: heigth 2s; */
+    
+}
+main p:nth-child(3) {
+    /* border: 2px solid black; */
+    transition: all 1s;
+    height: 0px;
+    margin-top: 11px;
+    margin-bottom: 0px;
+
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #edfce1;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 30px;
+    width: 10%;
+    background-color: #48A300;
+    border-radius: 15px;
+    transition: width 1s ease;
+
+}
+
+header {
+    padding: 0px 10px;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+header h2 {
+    font-size: 32px;
+    margin: 0px;
+}
+
+
+*/ .guide {
+    font-weight: 700;
+}
+
+main{
+/* height: 100%; */
+/* border: 2px solid red; */
+/* transition-property: heigth; */
+transition: height 2s;
+}
+
+header img[alt="face"] {
+    position: absolute;
+    left: 149px;
+    top: 0;
+    bottom: 0px;
+    margin: auto;
+    z-index: 1;
+}
+
+header img[alt="sun"] {
+    position: absolute;
+    left: 130px;
+    animation: rotation ;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+   
+    }
+    
+    100%{
+        transform: rotate(360deg);
+
+    }
+}
+
+.sun{
+     display: flex;
+     align-items: center;
+     flex-wrap: nowrap;
+     justify-content: center;
+     /* border: 2px solid red; */
+}
+
+section {
+    /* border: 2px solid rgb(2, 65, 255); */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* padding: 20px; */
+}
+
+section div {
+    display: flex;
+    border: 2px solid rgb(233, 233, 233);
+    border-radius: 17px;
+    height: 82px;
+    align-items: center;
+    overflow: hidden;
+    gap: 19px;
+    padding: 0px 12px;
+
+}
+
+section input[type="text"] {
+    /* background-color: #48A300; */
+    font-size: 16px;
+    height: 100%;
+    color: #000000;
+    /* width: 100%; */
+    flex-grow: 1;
+    border-radius: 17px;
+    border: none;
+    outline: none;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+
+section input[type="radio"] {
+    width: 24px;
+    height: 24px;
+
+}
+
+
+footer {
+    /* border: 2px solid rgb(51, 0, 255); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer h2 {
+    font-size: 24px;
+}
+
+/* ------------------------------------------------------------ */
+/* stylish Custom-radio button  */
+
+label input {
+    display: none;
+    flex-shrink: 0;
+    width: 111px;
+}
+
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(223, 223, 223);
+    height: 23px;
+    width: 23px;
+    position: relative;
+    flex-shrink: 0;
+    border-radius: 50%;
+
+}
+.checkmark{
+    pointer-events: none;
+}
+
+
+label [type='radio']:checked+.checkmark {
+    display: block;
+    position: absolute;
+    flex-shrink: 0;
+    flex-grow: 0;
+    top: -1px;
+    left: -1px;
+    width: 25px;
+    height: 25px;
+    background-color: #48A300;
+    border-radius: 50%;
+    transition: background-color 0.1s ease-in;
+}
+
+
+
+label [type='radio']:checked+.checkmark::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    display: block;
+    width: 5px;
+    height: 12px;
+    border: 2px solid #ffffff;
+    transform: rotate(45deg);
+    border-width: 0px 3px 3px 0px;
+    border-radius: 3px;
+    transition: all 0.1s ease-in-out;
+
+}
+
+label:hover ::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    display: block;
+    width: 5px;
+    height: 12px;
+    border: 2px solid #48A300;
+    transform: rotate(45deg);
+    border-width: 0px 3px 3px 0px;
+    border-radius: 3px;
+
+}
+
+
+/* buttons in footer*/
+
+footer div {
+    border: 2px solid red;
+
+}
+
+footer div button {
+    border: 2px solid rgb(51, 255, 0);
+    height: 40PX;
+    width: 48px;
+}
+
+@media (max-width:764px) {
+    .mainheading {
+        font-size: 40px;
+        color: #48A300;
+        /* border: 2px solid black; */
+        margin: 5px 5px;
+    }
+
+    section {
+        /* border: 2px solid rgb(2, 65, 255); */
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* padding: 20px; */
+    }
+
+    .main {
+        text-align: center;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        /* margin: -10px; */
+    }
+ 
+
+    section div {
+        height: 55px;
+    }
+
+    .main {
+        text-align: left;
+        display: block;
+        max-width: 660px;
+        max-height: fit-content;
+        top: 179px;
+        left: 390px;
+        border-radius: 15px;
+        margin: auto;
+
+    }
+
+    section input[type="text"] {
+        font-size: 15px;
+        width: 100%;
+        border-radius: 17px;
+        font-weight: 500;
+    }
+
+    .progress-bar {
+        height: 15px;
+        width: 10%;
+        background-color: #48A300;
+        border-radius: 15px;
+        transition: width 1s ease;
+
+    }
+
+    footer {
+        text-align: center;
+    }
+
+
+    header img[alt="face"] {
+        left: 149px;
+        top: 0;
+        left: 19px;
+        bottom: -3px;
+
+    }
+    
+    header img[alt="sun"] {
+       
+        
+        top: 0;
+        left: 0px;
+    
+    }
+
+
+
+}
